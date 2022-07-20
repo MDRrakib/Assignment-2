@@ -1,0 +1,282 @@
+/* =================== Universal Styles / Common Styles ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+header,
+main {
+    margin: 0 auto;
+    max-width: 1320px;
+}
+
+button,
+a,
+li {
+    cursor: pointer;
+}
+
+/* ================ Animation Part ================== */
+
+@keyframes button-color-animation {
+    0% {
+        background: rgba(240, 45, 204, 0.7);
+    }
+
+    20% {
+        background: rgba(109, 47, 126, 0.7);
+    }
+
+    40% {
+        background: rgba(0, 140, 255, 0.7);
+    }
+
+    60% {
+        background: rgba(98, 0, 255, 0.7);
+    }
+
+    80% {
+        background: rgba(0, 140, 255, 0.7);
+    }
+
+    90% {
+        background: rgba(32, 248, 204, 0.7);
+    }
+}
+
+@keyframes bg-color-animation {
+    0% {
+        background: #130685;
+    }
+
+    50% {
+        background: #126ce1;
+    }
+}
+
+aside #selected,
+#view-all {
+    animation-name: button-color-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+header,
+aside ul {
+    animation-name: bg-color-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* ===================== Header Part ==================== */
+
+header {
+    background: #07aff2;
+    border-radius: 1.9em;
+    color: white;
+    display: flex;
+    padding: 1.9em 5em 1.9em 6.2em;
+    margin: 3.1em auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-text {
+    width: 65%;
+}
+
+.header-text h2 {
+    font-size: 4em;
+    line-height: 1.3em;
+}
+
+.header-text p {
+    margin: 2em 0;
+    font-size: 1.5em;
+}
+
+.header-text button {
+    border: none;
+    outline: none;
+    background: rgba(253, 6, 6, 0.685);
+    color: white;
+    font-size: 1.5em;
+    padding: .8em 1.7em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    border-radius: .3em;
+}
+
+.fa-angle-right {
+    font-size: 1.3em;
+}
+
+header img {
+    width: 30%;
+}
+
+/* Header Part End  */
+
+main {
+    display: flex;
+    gap: 30px;
+}
+
+/* ======================== left menu box styles =================== */
+
+aside ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 312px;
+    height: 312px;
+    padding: 30px;
+    background-color: #191446;
+    border-radius: 10px;
+    animation-delay: 2s;
+}
+
+aside a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+#selected {
+    background: rgba(153, 255, 0, 0.7);
+    color: white;
+    animation-delay: 2s;
+}
+
+/* left/menu box end  */
+
+/* ==================== Main Content Boxes Styles ==================== */
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 31%);
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
+.box {
+    border: .1mm solid rgba(128, 128, 128, 0.3);
+    border-radius: 1em;
+}
+
+.box img {
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+.details {
+    padding: 1em;
+}
+
+.details button {
+    color: white;
+    outline: none;
+    background: none;
+    background-color: #ff7e7e;
+    border: 3px solid rgb(23, 23, 23);
+    padding: .2em 1.2em;
+    border-radius: .2em;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.details h3 {
+    margin: 1em 0;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.time-and-comment {
+    display: flex;
+    gap: 1.5em;
+    color: grey;
+}
+
+.time-and-comment i {
+    margin-right: .5em;
+}
+
+/* tablet view-all button  */
+
+.view-all {
+    display: none;
+    justify-content: center;
+    margin: 1em auto 3em;
+}
+
+#view-all {
+    text-decoration: none;
+    background: rgba(153, 255, 0, 0.7);
+    color: white;
+    padding: .7em 2em;
+    font-size: 1.3em;
+    border-radius: .3em;
+}
+
+/* Main content part end  */
+
+/* ===================== Footer Styles =================== */
+
+footer {
+    background-color: #100c33;
+    margin-top: 13em;
+    padding: 8em 0 6em;
+}
+
+footer h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+footer hr {
+    border: 1px solid rgb(83, 82, 82);
+    width: 80%;
+    margin: 3em auto;
+}
+
+.footer-menu,
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-links i {
+    color: #1c1553;
+    background: rgb(255, 255, 255);
+    height: 2em;
+    width: 2em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+}
